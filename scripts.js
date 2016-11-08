@@ -13,6 +13,8 @@ function get_date(date){
         } else if (date == 'Morgen'){
             today.setDate(today.getDate() + 1);
             var dd = today.getDate();
+        } else {
+            console.log(date)
         }
         var mm = today.getMonth()+1; //January is 0!
         var yyyy = today.getFullYear();
@@ -54,6 +56,11 @@ function get_text(day, direction, position, used){
 
 
 $(document).ready(function(){
+    $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+
     var test;
     $('input').on('change', function() {
         day = $('input[name=day_selection]:checked', '#day').val(); 
@@ -62,7 +69,7 @@ $(document).ready(function(){
         used = $('input[name=used_selection]:checked', '#used').val(); 
 
         result = get_text(day, direction, position, used);
-        $('#results').attr("value", result);
+        $('#results').val(result);
     });
 
     console.log(get_date())

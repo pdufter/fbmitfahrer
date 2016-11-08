@@ -9,16 +9,26 @@
 
   <link rel="stylesheet" href="styles.css">
 
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 
 </head>
 
    <body>
-   <h1> Hashtag Generierung </h1>
-   <h2> Spar Dir das Tippen und kopiere den Text in die Facebookgruppe </h2>
+   <nav class=top-nav> Hashtag Generierung </nav>
+   <div class=main_container>
+   <div class=caption_container> 
+   <p class='caption'> Spar Dir das Tippen! </br> Beantworte ein paar Fragen und kopiere den Text in Deinen Post. </p>
+   </div>
 
-
-<div class='step'> 1. An welchem Tag fährst Du? </div>
+<div class='card-panel'>
+<span class="blue-text text-darken-2">1. An welchem Tag fährst Du?</span>
 <div class="radio-toolbar">
    <form id="day">
 
@@ -28,12 +38,12 @@
     <input type="radio" id="tomorrow" name="day_selection" value="Morgen">
     <label for="tomorrow">Morgen</label>
 
-    <input type="radio" id="other" name="day_selection" value="Wann anders">
-    <label for="other">Wann anders</label> 
 </form>
 </div>
+</div>
 
-<div> 2. In welche Richtung? </div>
+<div class='card-panel'> 
+<span class="blue-text text-darken-2"> 2. In welche Richtung? </span>
 <div class="radio-toolbar">
    <form id="direction">
 
@@ -44,24 +54,29 @@
     <label for="sbg_muc">SBG > MUC</label>
 </form>
 </div>
+ </div>
 
-<div> 3. Treffpunkt im Zug? </div>
+<div class='card-panel'> 
+<span class="blue-text text-darken-2"> 3. Treffpunkt im Zug? </span>
 <div class="radio-toolbar">
    <form id="position">
-
-    <input type="radio" id="front" name="position_selection" value="vorne" checked>
-    <label for="front">Vorne</label>
-
-    <input type="radio" id="middle" name="position_selection" value="mitte">
-    <label for="middle">Mitte</label>
 
     <input type="radio" id="back" name="position_selection" value="hinten">
     <label for="back">Hinten</label>
 
+    <input type="radio" id="middle" name="position_selection" value="mitte">
+    <label for="middle">Mitte</label>
+
+    <input type="radio" id="front" name="position_selection" value="vorne" checked>
+    <label for="front">Vorne</label>
+
 </form>
 </div>
+</div>
 
-<div> 4. Brauchst Du das Ticket weiter? </div>
+<div class='card-panel'> 
+<span class="blue-text text-darken-2"> 4. Brauchst Du das Ticket weiter? </span>
+
 <div class="radio-toolbar">
    <form id="used">
 
@@ -73,32 +88,68 @@
 
 </form>
 </div>
+ </div>
 
 
 
 
     <!-- <input type="button" onclick="sayHello()" value="Say Hello" /> -->
 
-<div> 5. Noch eine Notiz zum Post? </div>
+<div class='card-panel'> 
+<span class="blue-text text-darken-2"> 5. Noch eine Notiz zum Post?</span>
 
-    <input id="results" value="test" size=100></input>
+<div class="input-field col s12">
+    <textarea id="results" value="Hier wird Dein Post generiert." class="materialize-textarea"></textarea>
+    </div>
+     </div>
 
-<div> 6. Klick den Button um den Text zu kopieren </div>
+<div class='card-panel'> 
+<span class="blue-text text-darken-2"> 6. Klick den Button um den Text zu kopieren </span>
 
 <div>
-<button class="btn" data-clipboard-action="copy" data-clipboard-target="#results">
+<button class="btn waves-effect waves-light btn" data-clipboard-action="copy" data-clipboard-target="#results">
 Ab in die Zwischenablage...
 </button>
 </div>
+</div>
+
+<div class='card-panel'> 
+<span class="blue-text text-darken-2">7. Poste den Text auf Facebook.</span>
+ </div>
+
+<div class='card-panel'> 
+<span class="blue-text text-darken-2">Gute Reise and sank you for travelling with Deutsche Bahn. </span>
+</div>
+</div>
 
 
-<div> 7. Poste den Text auf Facebook. </div>
-
-<div> 8. Gute Reise and sank you for travelling with Deutsche Bahn. </div>
-
+ <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Hashtag Generator für Bayernticket Mitfahrer</h5>
+                <p class="grey-text text-lighten-4">Design powered by materialize. Used under the MIT license.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="http://materializecss.com">Materialize</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://github.com/Dogfalo/materialize/blob/master/LICENSE">License</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/groups/bayernticketmucsbg/">Facebook Group</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Philipp Dufter
+            </div>
+          </div>
+        </footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
 <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
 <script> 
 

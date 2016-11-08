@@ -1,3 +1,25 @@
+
+.top-nav{
+    font-size: 24pt;
+    text-align: center;
+}
+
+body{
+    padding: 0px;
+}
+
+.main_container{
+    padding: 3%;
+}
+
+label{
+    margin-right: 15px;
+}
+
+.caption_container{
+    padding: 10px;
+}
+/*
 .radio-toolbar input[type="radio"] {
     display:none; 
 }
@@ -13,3 +35,8 @@
 .radio-toolbar input[type="radio"]:checked + label { 
     background-color:red;
 }
+
+.step{
+    background-color: #b84139;
+}
+*/

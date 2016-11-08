@@ -1,179 +1,126 @@
 <!doctype html>
-
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-
-  <title>BT Mitfahrer</title>
-  <meta name="author" content="Philipp Dufter">
-
-  <link rel="stylesheet" href="css/styles.css">
-
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-
-</head>
-
-   <body>
-   <nav class=top-nav> BT Hashtag Generator </nav>
-   <div class=main_container>
-   <div class=caption_container> 
-   <p class='caption'> Spar Dir das Tippen! </br> Beantworte ein paar Fragen und kopiere den Text in Deinen Post. </p>
-   </div>
-
-<div class='card-panel'>
-<span class="blue-text text-darken-2">1. An welchem Tag fährst Du?</span>
-<div class="radio-toolbar">
-   <form id="day">
-
-    <input type="radio" id="today" name="day_selection" value="Heute" checked>
-    <label for="today">Heute</label>
-
-    <input type="radio" id="tomorrow" name="day_selection" value="Morgen">
-    <label for="tomorrow">Morgen</label>
-
-</form>
-</div>
-</div>
-
-<div class='card-panel'> 
-<span class="blue-text text-darken-2"> 2. In welche Richtung? </span>
-<div class="radio-toolbar">
-   <form id="direction">
-
-    <input type="radio" id="muc_sbg" name="direction_selection" value="muc_sbg" checked>
-    <label for="muc_sbg">MUC > SBG</label>
-
-    <input type="radio" id="sbg_muc" name="direction_selection" value="sbg_muc">
-    <label for="sbg_muc">SBG > MUC</label>
-</form>
-</div>
- </div>
-
-<div class='card-panel'> 
-<span class="blue-text text-darken-2"> 3. Treffpunkt im Zug? </span>
-<div class="radio-toolbar">
-   <form id="position">
-
-    <input type="radio" id="back" name="position_selection" value="hinten">
-    <label for="back">Hinten</label>
-
-    <input type="radio" id="middle" name="position_selection" value="mitte">
-    <label for="middle">Mitte</label>
-
-    <input type="radio" id="front" name="position_selection" value="vorne" checked>
-    <label for="front">Vorne</label>
-
-</form>
-</div>
-</div>
-
-<div class='card-panel'> 
-<span class="blue-text text-darken-2"> 4. Brauchst Du das Ticket weiter? </span>
-
-<div class="radio-toolbar">
-   <form id="used">
-
-    <input type="radio" id="no" name="used_selection" value="nein" checked>
-    <label for="no">Nein</label>
-
-    <input type="radio" id="yes" name="used_selection" value="ja">
-    <label for="yes">Ja</label>
-
-</form>
-</div>
- </div>
-
-
-
-
-    <!-- <input type="button" onclick="sayHello()" value="Say Hello" /> -->
-
-<div class='card-panel'> 
-<span class="blue-text text-darken-2"> 5. Noch eine Notiz zum Post?</span>
-
-<div class="input-field col s12">
-    <textarea id="results" value="Hier wird Dein Post generiert." class="materialize-textarea"></textarea>
+  <head>
+    <meta charset="utf-8">
+    <title>BT Mitfahrer</title>
+    <meta name="author" content="Philipp Dufter">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+  <nav class=top-nav> BT Hashtag Generator </nav>
+  <div class=main_container>
+    <div class=caption_container>
+      <p class='caption'> Spar Dir das Tippen! </br> Beantworte ein paar Fragen und kopiere den Text in Deinen Post. </p>
     </div>
-     </div>
-
-<div class='card-panel'> 
-<span class="blue-text text-darken-2"> 6. Klick den Button um den Text zu kopieren und poste ihn auf Facebook.</span>
-
-<div class='button_container'>
-<button class="btn waves-effect waves-light btn" data-clipboard-action="copy" data-clipboard-target="#results">
-Text kopieren
-</button>
-</div>
-</div>
-
-<div class=caption_container> 
-   <p class='caption'> Gute Reise and sank you for travelling with Deutsche Bahn.  </p>
-   </div>
-
-</div>
-
-
- <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Hashtag Generator für Bayernticket Mitfahrer</h5>
-                <p class="grey-text text-lighten-4">Powered by materialize and clipboard.js. Both used under the MIT license. Thanks!</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="http://materializecss.com">Materialize</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://clipboardjs.com">Clipboard.js</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://github.com/Dogfalo/materialize/blob/master/LICENSE">License</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/groups/bayernticketmucsbg/">Facebook Group</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2016 Copyright Philipp Dufter
-            </div>
-          </div>
-        </footer>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
-
-<script>
+    <div class='card-panel'>
+      <span class="blue-text text-darken-2">1. An welchem Tag fährst Du?</span>
+      <div class="radio-toolbar">
+        <form id="day">
+          <input type="radio" id="today" name="day_selection" value="Heute" checked>
+          <label for="today">Heute</label>
+          <input type="radio" id="tomorrow" name="day_selection" value="Morgen">
+          <label for="tomorrow">Morgen</label>
+        </form>
+      </div>
+    </div>
+    <div class='card-panel'>
+      <span class="blue-text text-darken-2"> 2. In welche Richtung? </span>
+      <div class="radio-toolbar">
+        <form id="direction">
+          <input type="radio" id="muc_sbg" name="direction_selection" value="muc_sbg" checked>
+          <label for="muc_sbg">MUC > SBG</label>
+          <input type="radio" id="sbg_muc" name="direction_selection" value="sbg_muc">
+          <label for="sbg_muc">SBG > MUC</label>
+        </form>
+      </div>
+    </div>
+    <div class='card-panel'>
+      <span class="blue-text text-darken-2"> 3. Treffpunkt im Zug? </span>
+      <div class="radio-toolbar">
+        <form id="position">
+          <input type="radio" id="back" name="position_selection" value="hinten">
+          <label for="back">Hinten</label>
+          <input type="radio" id="middle" name="position_selection" value="mitte">
+          <label for="middle">Mitte</label>
+          <input type="radio" id="front" name="position_selection" value="vorne" checked>
+          <label for="front">Vorne</label>
+        </form>
+      </div>
+    </div>
+    <div class='card-panel'>
+      <span class="blue-text text-darken-2"> 4. Brauchst Du das Ticket weiter? </span>
+      <div class="radio-toolbar">
+        <form id="used">
+          <input type="radio" id="no" name="used_selection" value="nein" checked>
+          <label for="no">Nein</label>
+          <input type="radio" id="yes" name="used_selection" value="ja">
+          <label for="yes">Ja</label>
+        </form>
+      </div>
+    </div>
+    <!-- <input type="button" onclick="sayHello()" value="Say Hello" /> -->
+    <div class='card-panel'>
+      <span class="blue-text text-darken-2"> 5. Noch eine Notiz zum Post?</span>
+      <div class="input-field col s12">
+        <textarea id="results" value="Hier wird Dein Post generiert." class="materialize-textarea"></textarea>
+      </div>
+    </div>
+    <div class='card-panel'>
+      <span class="blue-text text-darken-2"> 6. Klick den Button um den Text zu kopieren und poste ihn auf Facebook.</span>
+      <div class='button_container'>
+        <button class="btn waves-effect waves-light btn" data-clipboard-action="copy" data-clipboard-target="#results">
+        Text kopieren
+        </button>
+      </div>
+    </div>
+    <div class=caption_container>
+      <p class='caption'> Gute Reise and sank you for travelling with Deutsche Bahn.  </p>
+    </div>
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Hashtag Generator für Bayernticket Mitfahrer</h5>
+          <p class="grey-text text-lighten-4">Powered by materialize and clipboard.js. Both used under the MIT license. Thanks!</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="http://materializecss.com">Materialize</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://clipboardjs.com">Clipboard.js</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/Dogfalo/materialize/blob/master/LICENSE">License</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/groups/bayernticketmucsbg/">Facebook Group</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2016 Copyright Philipp Dufter
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
+  <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-87060600-1', 'auto');
   ga('send', 'pageview');
-
-</script>
-
-<script> 
-
- var clipboard = new Clipboard('.btn');
-     clipboard.on('success', function(e) {
-        console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        console.log('error');
-        console.log(e);
-    });
-
-     </script>
+  </script>
+  <script>
+  var clipboard = new Clipboard('.btn');
+  </script>
   <script src="js/scripts.js"></script>
-
-   </body>
+</body>
 </html>

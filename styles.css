@@ -19,6 +19,11 @@ label{
 .caption_container{
     padding: 10px;
 }
+
+.button_container{
+    padding: 10px;
+}
+
 /*
 .radio-toolbar input[type="radio"] {
     display:none; 

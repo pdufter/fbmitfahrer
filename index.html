@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+
+  <title>Bayernticket Mitfahrer</title>
+  <meta name="author" content="Philipp Dufter">
+
+  <link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+
+   <body>
+   <h1> Hashtag Generierung </h1>
+   <h2> Spar Dir das Tippen und kopiere den Text in die Facebookgruppe </h2>
+
+
+<div class='step'> 1. An welchem Tag fährst Du? </div>
+<div class="radio-toolbar">
+   <form id="day">
+
+    <input type="radio" id="today" name="day_selection" value="Heute" checked>
+    <label for="today">Heute</label>
+
+    <input type="radio" id="tomorrow" name="day_selection" value="Morgen">
+    <label for="tomorrow">Morgen</label>
+
+    <input type="radio" id="other" name="day_selection" value="Wann anders">
+    <label for="other">Wann anders</label> 
+</form>
+</div>
+
+<div> 2. In welche Richtung? </div>
+<div class="radio-toolbar">
+   <form id="direction">
+
+    <input type="radio" id="muc_sbg" name="direction_selection" value="muc_sbg" checked>
+    <label for="muc_sbg">MUC > SBG</label>
+
+    <input type="radio" id="sbg_muc" name="direction_selection" value="sbg_muc">
+    <label for="sbg_muc">SBG > MUC</label>
+</form>
+</div>
+
+<div> 3. Treffpunkt im Zug? </div>
+<div class="radio-toolbar">
+   <form id="position">
+
+    <input type="radio" id="front" name="position_selection" value="vorne" checked>
+    <label for="front">Vorne</label>
+
+    <input type="radio" id="middle" name="position_selection" value="mitte">
+    <label for="middle">Mitte</label>
+
+    <input type="radio" id="back" name="position_selection" value="hinten">
+    <label for="back">Hinten</label>
+
+</form>
+</div>
+
+<div> 4. Brauchst Du das Ticket weiter? </div>
+<div class="radio-toolbar">
+   <form id="used">
+
+    <input type="radio" id="no" name="used_selection" value="nein" checked>
+    <label for="no">Nein</label>
+
+    <input type="radio" id="yes" name="used_selection" value="ja">
+    <label for="yes">Ja</label>
+
+</form>
+</div>
+
+
+
+
+    <!-- <input type="button" onclick="sayHello()" value="Say Hello" /> -->
+
+<div> 5. Noch eine Notiz zum Post? </div>
+
+    <input id="results" value="test" size=100></input>
+
+<div> 6. Klick den Button um den Text zu kopieren </div>
+
+<div>
+<button class="btn" data-clipboard-action="copy" data-clipboard-target="#results">
+Ab in die Zwischenablage...
+</button>
+</div>
+
+
+<div> 7. Poste den Text auf Facebook. </div>
+
+<div> 8. Gute Reise and sank you for travelling with Deutsche Bahn. </div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
+<script> 
+
+ var clipboard = new Clipboard('.btn');
+     clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log('error');
+        console.log(e);
+    });
+
+     </script>
+  <script src="scripts.js"></script>
+
+   </body>
+</html>

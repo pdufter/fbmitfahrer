@@ -17,7 +17,7 @@ function get_date(){
 
 
 
-function get_text(day, direction, position, used){
+function get_text(day, direction, position, used, used_direction){
     hashtag = '#' + get_date(day) + "_" + direction
 
     positions_text = "Wir treffen uns " + position + ". "
@@ -28,7 +28,11 @@ function get_text(day, direction, position, used){
     if (used == 'nein') {
         ticket = "Das Ticket könnt ihr weiterbenutzen. "
     } else {
-        ticket = "Ich brauch das Ticket weiterhin. "
+        if (used_direction === undefined | used_direction === ""){
+            ticket = "Ich brauch das Ticket weiterhin."
+        } else {
+            ticket = "Ich brauch das Ticket weiterhin nach " + used_direction + "."
+        }
     }
 
     result = hashtag + ". " + positions_text + ticket
@@ -36,6 +40,22 @@ function get_text(day, direction, position, used){
 };
 
 
+
+function update_text(){
+        day = get_date();
+        direction = $('input[name=direction_selection]:checked', '#direction').val(); 
+        position = $('input[name=position_selection]:checked', '#position').val(); 
+        used = $('input[name=used_selection]:checked', '#used').val(); 
+        if (used == 'ja'){
+            $('.display_used_yes_direction').css('display', 'block');
+        } else {
+            $('.display_used_yes_direction').css('display', 'none');
+        };
+        used_direction = $('#used_yes_direction').val();
+        console.log(used_direction);
+        result = get_text(day, direction, position, used, used_direction);
+        $('#results').val(result);
+};
 
 $(document).ready(function(){
     $('.datepicker').pickadate({
@@ -46,15 +66,15 @@ $(document).ready(function(){
   }
 });
     $('.datepicker').pickadate().pickadate('picker').set('select',  new Date());
-
+    update_text();
     $('input').on('change', function() {
-        day = get_date();
-        direction = $('input[name=direction_selection]:checked', '#direction').val(); 
-        position = $('input[name=position_selection]:checked', '#position').val(); 
-        used = $('input[name=used_selection]:checked', '#used').val(); 
-
-        result = get_text(day, direction, position, used);
-        $('#results').val(result);
+        update_text();
     });
+
+    $('#used_yes_direction').on('keyup', function () {
+        update_text();
+    });
+
+
 
 });

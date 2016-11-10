@@ -24,7 +24,9 @@ label{
     padding: 10px;
 }
 
-
+.display_used_yes_direction{
+    display:none;
+}
 /*
 #picker_container{
     zoom: 0.5;

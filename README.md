@@ -9,8 +9,6 @@ To run the site on your local machine you need to download
 
 -------------------
 TODO
-- fix date bug when selecting tomorrow
-- replace date with calendar
 - add option to add comment for furher use of ticket
 - find proper domain for deployment
 - integrate site where current offers are visible (using Facebook API)

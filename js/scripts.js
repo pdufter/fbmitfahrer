@@ -8,10 +8,12 @@ function get_date(date){
         // TODO 
     } else {
         var today = new Date();
+        var dd;
         if (date == 'Heute'){
             var dd = today.getDate();
         } else if (date == 'Morgen'){
             today.setDate(today.getDate() + 1);
+            console.log(today.getDate())
             var dd = today.getDate();
         } else {
             console.log(date)
@@ -27,7 +29,7 @@ function get_date(date){
             mm='0'+mm
         } 
 
-        return dd + mm + yyyy.toString().substring(2, 4);
+        return dd.toString() + mm.toString() + yyyy.toString().substring(2, 4);
     }
 };
 

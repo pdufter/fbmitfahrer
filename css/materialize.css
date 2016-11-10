@@ -7807,7 +7807,7 @@ input[type=range]:focus::-ms-fill-upper {
  * Note: the root picker element should *NOT* be styled more than what's here.
  */
 .picker {
-  font-size: 16px;
+  font-size: 12px;
   text-align: left;
   line-height: 1.2;
   color: #000000;

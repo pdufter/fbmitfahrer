@@ -6005,7 +6005,6 @@ DatePicker.prototype.set = function( type, value, options ) {
             calendar.set( 'highlight', calendarItem.highlight, options )
         }
     }
-
     return calendar
 } //DatePicker.prototype.set
 
@@ -7029,12 +7028,6 @@ return _.node(
                 'div',
                 createDayLabel() ,
                 settings.klass.day_display
-            )+
-            _.node(
-                // Div for Year
-                'div',
-                createYearLabel("raw") ,
-                settings.klass.year_display
             ),
         settings.klass.date_display
     )+
@@ -7142,10 +7135,6 @@ return _.node(
         _.node( 'button', settings.today, "btn-flat picker__today",
             'type=button data-pick=' + nowObject.pick +
             ( isOpen && !calendar.disabled(nowObject) ? '' : ' disabled' ) + ' ' +
-            _.ariaAttr({ controls: calendar.$node[0].id }) ) +
-        _.node( 'button', settings.clear, "btn-flat picker__clear",
-            'type=button data-clear=1' +
-            ( isOpen ? '' : ' disabled' ) + ' ' +
             _.ariaAttr({ controls: calendar.$node[0].id }) ) +
         _.node('button', settings.close, "btn-flat picker__close",
             'type=button data-close=true ' +

@@ -24,24 +24,10 @@ label{
     padding: 10px;
 }
 
+
 /*
-.radio-toolbar input[type="radio"] {
-    display:none; 
-}
-
-.radio-toolbar label {
-    display:inline-block;
-    background-color:#ddd;
-    padding:4px 11px;
-    font-family:Arial;
-    font-size:16px;
-}
-
-.radio-toolbar input[type="radio"]:checked + label { 
-    background-color:red;
-}
-
-.step{
-    background-color: #b84139;
+#picker_container{
+    zoom: 0.5;
+    -moz-transform: scale(0.5);
 }
 */

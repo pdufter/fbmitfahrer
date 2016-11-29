@@ -10,6 +10,9 @@ To run the site on your local machine you need to download
 
 -------------------
 TODO
+- add time selection possibility
+- calendar closes when month is selected
+- integrate db api
 - find proper domain for deployment
 - integrate site where current offers are visible (using Facebook API)
 - enable automated posting when user logged in into Facebook

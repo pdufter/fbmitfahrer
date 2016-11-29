@@ -56,7 +56,9 @@ $(document).ready(function() {
         selectMonths: false, // Creates a dropdown to control month
         selectYears: 0, // Creates a dropdown of 15 years to control year
         onSet: function(context) {
-            this.close();
+            if (context['select']){
+                this.close();
+            }
         }
     });
     $('.datepicker').pickadate().pickadate('picker').set('select', new Date());

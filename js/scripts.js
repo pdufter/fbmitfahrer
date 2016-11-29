@@ -1,8 +1,3 @@
-function sayHello() {
-    alert("Hello World")
-};
-
-
 function get_date() {
     yy = $('.datepicker').pickadate('picker').get('highlight', 'yy');
     mm = $('.datepicker').pickadate('picker').get('highlight', 'mm');
@@ -13,18 +8,18 @@ function get_date() {
     return dd.toString() + mm.toString() + yy.toString();
 };
 
-
-
-
+function get_time() {
+    time = $('#time').val();
+    return time
+};
 
 function get_text(day, direction, position, used, used_direction) {
-    hashtag = '#' + get_date(day) + "_" + direction
-
-    positions_text = "Wir treffen uns " + position + ". "
+    hashtag = '#' + get_date(day) + "_" + direction;
+    time = ' ' + get_time() + '. ';
+    positions_text = "Wir treffen uns " + position + ". ";
     if (position == 'mitte') {
         positions_text = "Wir treffen uns in der Mitte. "
-    }
-
+    };
     if (used == 'nein') {
         ticket = "Das Ticket könnt ihr weiterbenutzen. "
     } else {
@@ -35,11 +30,9 @@ function get_text(day, direction, position, used, used_direction) {
         }
     }
 
-    result = hashtag + ". " + positions_text + ticket
+    result = hashtag + ". " + time + positions_text + ticket
     return result
 };
-
-
 
 function update_text() {
     day = get_date();
@@ -57,6 +50,8 @@ function update_text() {
 };
 
 $(document).ready(function() {
+    dt = new Date($.now());
+    $('#time').val(dt.getHours() + ':' + dt.getMinutes());
     $('.datepicker').pickadate({
         selectMonths: false, // Creates a dropdown to control month
         selectYears: 0, // Creates a dropdown of 15 years to control year

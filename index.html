@@ -19,14 +19,7 @@
       <p class='caption'> Spar Dir das Tippen! </br> Beantworte ein paar Fragen und kopiere den Text in Deinen Post. </p>
     </div>
     <div class='card-panel'>
-      <span class="blue-text text-darken-2">1. An welchem Tag fährst Du?</span>
-      <div id='picker_container'>
-        <label for="date">Datum</label>
-        <input id="date" name="date" type="date" class="datepicker">
-      </div>
-    </div>
-    <div class='card-panel'>
-      <span class="blue-text text-darken-2"> 2. In welche Richtung? </span>
+      <span class="blue-text text-darken-2"> 1. In welche Richtung fährst Du? </span>
       <div class="radio-toolbar">
         <form id="direction">
           <input type="radio" id="muc_sbg" name="direction_selection" value="muc_sbg" checked>
@@ -37,7 +30,21 @@
       </div>
     </div>
     <div class='card-panel'>
-      <span class="blue-text text-darken-2"> 3. Treffpunkt im Zug? </span>
+      <span class="blue-text text-darken-2">2. An welchem Tag?</span>
+      <div id='picker_container'>
+        <label for="date">Datum</label>
+        <input id="date" name="date" type="date" class="datepicker">
+      </div>
+    </div>
+    <div class='card-panel'>
+      <span class="blue-text text-darken-2">3. Abfahrtszeit (in muc normalerweise: hh:55 /sbg:  hh:15)?</span>
+      <div id='picker_container'>
+        <label for="time">Uhrzeit</label>
+        <input id="time" name="time" type="time">
+      </div>
+    </div>
+    <div class='card-panel'>
+      <span class="blue-text text-darken-2"> 4. Treffpunkt im Zug? </span>
       <div class="radio-toolbar">
         <form id="position">
           <input type="radio" id="back" name="position_selection" value="hinten">
@@ -50,7 +57,7 @@
       </div>
     </div>
     <div class='card-panel'>
-      <span class="blue-text text-darken-2"> 4. Brauchst Du das Ticket weiter? </span>
+      <span class="blue-text text-darken-2"> 5. Brauchst Du das Ticket weiter? </span>
       <div class="radio-toolbar">
         <form id="used">
           <input type="radio" id="no" name="used_selection" value="nein" checked>
@@ -64,13 +71,13 @@
     </div>
     <!-- <input type="button" onclick="sayHello()" value="Say Hello" /> -->
     <div class='card-panel'>
-      <span class="blue-text text-darken-2"> 5. Noch eine Notiz zum Post?</span>
+      <span class="blue-text text-darken-2"> 6. Noch eine Notiz zum Post?</span>
       <div class="input-field col s12">
         <textarea id="results" value="Hier wird Dein Post generiert." class="materialize-textarea"></textarea>
       </div>
     </div>
     <div class='card-panel'>
-      <span class="blue-text text-darken-2"> 6. Klick den Button um den Text zu kopieren und poste ihn auf Facebook.</span>
+      <span class="blue-text text-darken-2"> 7. Klick den Button um den Text zu kopieren und poste ihn auf Facebook.</span>
       <div class='button_container'>
         <button class="btn waves-effect waves-light btn" data-clipboard-action="copy" data-clipboard-target="#results">
         Text kopieren
@@ -107,6 +114,7 @@
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/materialize.js"></script>
+
   <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

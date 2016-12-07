@@ -5,8 +5,8 @@ Currently only supported for the route Salzburg-Munich.
 For a demo see https://pdufter.github.io/fbmitfahrer/
 
 # Powered by
-materialize.css
-clipboard.js
+- materialize.css
+- clipboard.js
 
 # Contribution
 - Contact me or an admin of the facebook group https://www.facebook.com/groups/bayernticketmucsbg/

@@ -12,4 +12,4 @@ For a demo see https://pdufter.github.io/fbmitfahrer/
 - Contact me or an admin of the facebook group https://www.facebook.com/groups/bayernticketmucsbg/
 - Read up on issues and be creative to add new features
 - fork the repo and create pull requests once you finished coding
-- note that the webpage is deployed on the master branch
+- note that the webpage is deployed on the master branch, all development is on the branch 'dev'

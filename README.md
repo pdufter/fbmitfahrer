@@ -1,4 +1,4 @@
-# BT_helper
+# Hashtag Generator for "Facebook Mitfahrer" Groups
 Helper to create posts for Bayern Ticket Mitfahrer groups in Facebook.
 Currently only supported for the route Salzburg-Munich.
 

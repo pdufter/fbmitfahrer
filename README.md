@@ -2,17 +2,14 @@
 Helper to create posts for Bayern Ticket Mitfahrer groups in Facebook.
 Currently only supported for the route Salzburg-Munich.
 
-For a demo see http://fbmitfahrer.hornissimo.de
+For a demo see https://pdufter.github.io/fbmitfahrer/
 
-To run the site on your local machine you need to download
-- materialize css from http://materializecss.com/getting-started.html (for the fonts only)
-- clipboard js from https://clipboardjs.com
+# Powered by
+materialize.css
+clipboard.js
 
--------------------
-TODO
-- integrate db api
-- find proper domain for deployment
-- integrate site where current offers are visible (using Facebook API)
-- enable automated posting when user logged in into Facebook
-
-
+# Contribution
+- Contact me or an admin of the facebook group https://www.facebook.com/groups/bayernticketmucsbg/
+- Read up on issues and be creative to add new features
+- fork the repo and create pull requests once you finished coding
+- note that the webpage is deployed on the master branch

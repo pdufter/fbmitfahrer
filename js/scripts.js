@@ -28,7 +28,7 @@ function get_text(day, direction, time, position, used, used_direction) {
         if (used_direction === undefined | used_direction === "") {
             ticket = "Ich brauch das Ticket weiterhin."
         } else {
-            ticket = "Ich brauch das Ticket weiterhin nach " + used_direction + "."
+            ticket = "Ich brauch das Ticket weiter " + used_direction
         }
     }
 

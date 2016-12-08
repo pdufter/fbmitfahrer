@@ -10,14 +10,30 @@ function get_date() {
     return dd.toString() + mm.toString() + yy.toString();
 };
 
+function get_weekday() {
+    yyyy = $('.datepicker').pickadate('picker').get('highlight', 'yyyy');
+    mm = $('.datepicker').pickadate('picker').get('highlight', 'mm');
+    dd = $('.datepicker').pickadate('picker').get('highlight', 'dd');
+    weekday = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"][(new Date(yyyy, mm - 1, dd)).getDay()];
+    return weekday;
+};
+
 function get_time() {
     time = $('#time').val();
     return time
 };
 
+function format_date() {
+    mm = $('.datepicker').pickadate('picker').get('highlight', 'mm');
+    dd = $('.datepicker').pickadate('picker').get('highlight', 'dd');
+    return dd + "." + mm + "."
+}
+
 function get_text(day, direction, time, position, used, used_direction) {
     hashtag = '#' + get_date(day) + "_" + direction;
-    time = ' ' + time + '. ';
+    time = time + '. ';
+    weekday = get_weekday();
+    formatted_date = format_date();
     positions_text = "Wir treffen uns " + position + ". ";
     if (position == 'mitte') {
         positions_text = "Wir treffen uns in der Mitte. "
@@ -32,7 +48,7 @@ function get_text(day, direction, time, position, used, used_direction) {
         }
     }
 
-    result = hashtag + ". " + time + positions_text + ticket
+    result = hashtag + ". " + weekday + ", " + formatted_date + " um " + time + positions_text + ticket
     return result
 };
 
@@ -41,7 +57,7 @@ function update_text() {
     direction = $('input[name=direction_selection]:checked', '#direction').val();
     if(!TIME_ENTERED){
         dt = new Date($.now());
-        dep_sbg = 15;
+        dep_sbg = 13;
         dep_muc = 55;
         if(direction == 'muc_sbg'){
             mm = dep_muc;
